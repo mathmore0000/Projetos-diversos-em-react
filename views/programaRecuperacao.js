@@ -43,7 +43,7 @@ export default function App() {
       <TouchableOpacity
         onPress={verificar}
       >
-        <Text style={{ color: 'black' }}>Converter</Text>
+        <Text style={{ color: 'black' }}>Calcular</Text>
       </TouchableOpacity>
 
       <Text style={estilo}>{resultado}</Text>
