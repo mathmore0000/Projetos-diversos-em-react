@@ -70,6 +70,7 @@ export default function App() {
       }
       else{
         if (notaFinal >= 5) {
+          setMsgPrincipal("");
           setRecuperacao(false);
           setResultado("APROVADO");
           setCor('green');
