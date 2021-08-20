@@ -75,7 +75,7 @@ export default function App() {
           setCor('green');
         }
         else {
-          setMsgPrincipal("Da recuperação");
+          setMsgPrincipal("da recuperação");
           setRecuperacao(true);
           setResultado("REPROVADO");
           setCor('red');
