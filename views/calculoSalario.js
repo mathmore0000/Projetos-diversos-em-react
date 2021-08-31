@@ -39,7 +39,7 @@ export default function App() {
   );
 
   function calcular() {
-    var salario = qtdHorasTrabalhadas * salarioPHora;
+    var salario = qtdHorasTrabalhadas * salarioPHora * 30;
 
     if (salario != 0 && salario > 0) {
       setResultado("Trabalhando " + qtdHorasTrabalhadas + " horas por dia com um salario de R$ " + salarioPHora + " por hora você ganha ao mes R$ " + salario);
