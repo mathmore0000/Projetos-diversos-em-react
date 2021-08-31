@@ -16,37 +16,37 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <Text>{'Calcular pontos'}</Text>
+      <Text style={styles.titulo}>{'Calcular pontos'}</Text>
 
-      <TextInput
+      <TextInput style={styles.inputdetexto}
         value={n1}
         onChangeText={(n1) => setN1(n1)}
-        placeholder="Nota 1 aqui"
+        placeholder="Insira a nota 3"
         keyboardType="numeric"
       />
 
-      <TextInput
+      <TextInput style={styles.inputdetexto}
         value={n2}
         onChangeText={(n2) => setN2(n2)}
-        placeholder="Nota 2 aqui"
+        placeholder="Insira a nota 2"
         keyboardType="numeric"
       />
 
-      <TextInput
+      <TextInput style={styles.inputdetexto}
         value={n3}
         onChangeText={(n3) => setN3(n3)}
-        placeholder="Nota 3 aqui"
+        placeholder="Insira a nota 3"
         keyboardType="numeric"
       />
 
-      <TextInput
+      <TextInput style={styles.inputdetexto}
         value={n4}
         onChangeText={(n4) => setN4(n4)}
-        placeholder="Nota 4 aqui"
+        placeholder="Insira a nota 4"
         keyboardType="numeric"
       />
 
-      <TouchableOpacity
+      <TouchableOpacity style ={styles.botao}
         onPress={verificar}
       >
         <Text style={{ color: 'black' }}>Converter</Text>
@@ -79,7 +79,7 @@ export default function App() {
       }
     }
     else {
-      setResultado("Pontuação inválida");
+      setResultado(<Text style={styles.aviso}>Pontuação inválida!</Text>);
       setCor('black');
     }
     setN1('');
@@ -96,4 +96,48 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  botao: {
+    backgroundColor: '#F5FCFF',
+    textAlign: 'center',
+    alignItems: 'center',
+    width: '50%',
+    height: '6%',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 10,
+    marginTop: 10,
+    textAlign:'center',
+    marginBottom: 20,
+    marginTop: 20,
+    justifyContent: 'center',
+ 
+   },
+   titulo:{
+     fontSize: 20,
+     fontStyle: 'italic',
+     textAlign:'center',
+     marginBottom: 20,
+ 
+   },
+   inputdetexto:{ 
+     fontSize: 17,
+     borderBottomWidth: 1,
+     width: '62%',
+     textAlign:'center',
+     marginBottom: 5,
+     marginTop: 5,
+   },
+   converter:{ 
+     fontSize: 15,
+     textAlign: 'center',
+     alignItems: 'center',
+     fontWeight: 'bold',
+     
+     
+   },
+   aviso:{
+     fontSize: 15,
+     color:'red',
+ 
+   }
 });

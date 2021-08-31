@@ -9,16 +9,16 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <Text>Celsius para fahrenheit</Text>
+      <Text style={styles.titulo}>Celsius para fahrenheit</Text>
 
-      <TextInput
+      <TextInput style={styles.inputdetexto}
         value={celsius}
         onChangeText={(celsius) => setCelsius(celsius)}
-        placeholder="Graus celcius aqui"
+        placeholder="Temperatura em °C aqui"
         keyboardType="numeric"
       />
 
-      <TouchableOpacity
+      <TouchableOpacity style ={styles.botao}
         onPress={converter}
       >
         <Text>Converter</Text>
@@ -45,4 +45,46 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  botao: {
+    backgroundColor: '#F5FCFF',
+    textAlign: 'center',
+    alignItems: 'center',
+    width: '50%',
+    height: '6%',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 10,
+    marginTop: 10,
+    textAlign:'center',
+    marginBottom: 20,
+    marginTop: 20,
+    justifyContent: 'center',
+ 
+   },
+   titulo:{
+     fontSize: 20,
+     fontStyle: 'italic',
+     textAlign:'center',
+     marginBottom: 20,
+ 
+   },
+   inputdetexto:{ 
+     fontSize: 17,
+     borderBottomWidth: 1,
+     width: '62%',
+     textAlign:'center',
+   },
+   converter:{ 
+     fontSize: 15,
+     textAlign: 'center',
+     alignItems: 'center',
+     fontWeight: 'bold',
+     
+     
+   },
+   aviso:{
+     fontSize: 15,
+     color:'red',
+ 
+   }
 });
