@@ -21,28 +21,28 @@ export default function App() {
       <TextInput style={styles.inputdetexto}
         value={n1}
         onChangeText={(n1) => setN1(n1)}
-        placeholder="Insira a nota 3"
+        placeholder="Insira a primeira nota"
         keyboardType="numeric"
       />
 
       <TextInput style={styles.inputdetexto}
         value={n2}
         onChangeText={(n2) => setN2(n2)}
-        placeholder="Insira a nota 2"
+        placeholder="Insira a segunda nota"
         keyboardType="numeric"
       />
 
       <TextInput style={styles.inputdetexto}
         value={n3}
         onChangeText={(n3) => setN3(n3)}
-        placeholder="Insira a nota 3"
+        placeholder="Insira a terceira nota"
         keyboardType="numeric"
       />
 
       <TextInput style={styles.inputdetexto}
         value={n4}
         onChangeText={(n4) => setN4(n4)}
-        placeholder="Insira a nota 4"
+        placeholder="Insira a quarta nota"
         keyboardType="numeric"
       />
 
@@ -71,7 +71,7 @@ export default function App() {
       }
       else if (classificacaoFinal > 60 && classificacaoFinal < 91) {
         setResultado("MUITO BOM");
-        setCor('yellow');
+        setCor('blue');
       }
       else if (classificacaoFinal > 90 && classificacaoFinal < 101) {
         setResultado("ÓTIMO");
